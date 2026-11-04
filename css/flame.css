@@ -1,0 +1,533 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+
+    background: linear-gradient(90deg, rgb(5, 1, 31), rgb(24, 0, 111), rgb(34, 0, 61));
+    color: white;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    font-weight: 500;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.coffee {
+    margin-left: 20px;
+
+    transform: translateY(-3px);
+}
+
+.logo-name {
+    background: linear-gradient(45deg, rgb(59, 130, 246), rgb(221, 32, 255));
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    cursor: pointer;
+}
+
+.logo a {
+    font-weight: 1000;
+    text-decoration: none;
+}
+
+.nav-container {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-container>.menu:nth-child(5) {
+    margin-right: 40px;
+}
+
+.menu {
+    text-decoration: none;
+
+    color: white;
+
+    transition: 0.3s;
+
+    position: relative;
+    width: fit-content;
+}
+
+.menu::before {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+
+    border-radius: 1px;
+
+    background: white;
+
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+.menu:hover::before {
+    width: 110%;
+}
+
+.menu:hover {
+    text-shadow: 0 0 10px white;
+
+    transform: scale(1.27);
+}
+
+/* -------------------------------------------------------------------------------------==------- content ------------------------------------------------------------------------------------------------- */
+
+.flame-header {
+    width: 100%;
+    height: auto;
+
+    position: relative;
+    width: 100%;
+    padding: 0px 1% 120px;
+    overflow: hidden;
+    color: #fff;
+    background:
+        radial-gradient(ellipse at 10% 15%,
+            rgba(78, 25, 190, 0.16),
+            transparent 45%),
+        radial-gradient(ellipse at 90% 60%,
+            rgba(0, 100, 255, 0.12),
+            transparent 45%),
+        #05010f;
+}
+
+.flame-section h1 {
+    font-size: 50px;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 20px auto 50px;
+
+    background: linear-gradient(90deg, rgb(204, 0, 255), rgb(125, 173, 249), rgb(204, 0, 255));
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.flame-line {
+    position: relative;
+    width: min(220px, 60%);
+    height: 2px;
+    margin: 0 auto 75px;
+
+    background: linear-gradient(90deg,
+            transparent,
+            #8657ff,
+            #54c8ff,
+            transparent);
+
+    box-shadow: 0 0 15px rgba(123, 74, 255, 0.65);
+}
+
+.flame-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image info";
+    align-items: center;
+}
+
+.flame-image {
+    grid-area: image;
+}
+
+.flame-info {
+    grid-area: info;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.flame-info span {
+    font-weight: bold;
+}
+
+.flame-image {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 20px;
+}
+
+.flame-image img {
+    display: block;
+    box-sizing: border-box;
+
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+.meaning,
+.motive,
+.problem {
+    min-width: 0;
+    margin: 0;
+    padding: 15px 20px 20px;
+
+    color: #F5F3FF;
+    font-size: 20px;
+
+    border: 2px solid #6D28D9;
+    border-radius: 10px;
+}
+
+.meaning legend,
+.motive legend,
+.problem legend {
+    font-family: "Kanit";
+
+    padding: 0 12px;
+    border: none;
+
+    color: #bba4ff;
+    font-size: 26px;
+    font-weight: 600;
+
+    background: transparent;
+}
+
+.meaning i,
+.motive i,
+.problem i {
+    padding-right: 5px;
+}
+
+.meaning i {
+    font-size: 35px;
+
+    transform: rotate(-5deg);
+}
+
+.motive i {
+    font-size: 45px;
+
+    transform: rotate(10deg);
+}
+
+.problem i {
+    font-size: 35px;
+
+    transform: rotate(-10deg);
+}
+
+.meaning p,
+.motive p,
+.problem p {
+    font-family: "Google Sans";
+    font-size: 19px;
+    margin: 8px 0;
+
+    text-indent: 20px;
+}
+
+.closed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    margin: 150px auto 0;
+
+    width: 100%;
+}
+
+.contact-line1 {
+    position: relative;
+    width: min(700px, 100%);
+    height: 1px;
+    margin: 55px auto;
+
+    background: linear-gradient(90deg,
+            #8657ff,
+            #54c8ff);
+
+    box-shadow: 0 0 15px rgba(123, 74, 255, 0.65);
+}
+
+.contact-line2 {
+    position: relative;
+    width: min(700px, 100%);
+    height: 1px;
+    margin: 55px auto;
+
+    background: linear-gradient(90deg,
+            #54c8ff,
+            #8657ff);
+
+    box-shadow: 0 0 15px rgb(122, 74, 255);
+}
+
+.ending-icon {
+    position: relative;
+    font-size: 30px;
+    padding: 0 20px;
+
+    color: #7c4ae0;
+    text-shadow: 0 0 45px rgb(122, 74, 255);
+}
+
+
+/* ========================================
+   RESPONSIVE: TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+
+    /* ปรับพื้นที่เนื้อหาหลัก */
+    .flame-header {
+        box-sizing: border-box;
+        padding: 0 4% 80px;
+    }
+
+    /* เรียงรูปภาพไว้ด้านบน และเนื้อหาไว้ด้านล่าง */
+    .flame-container {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "image"
+            "info";
+        gap: 45px;
+    }
+
+    /* จัดกลุ่มรูปภาพ */
+    .flame-image {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .flame-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+    }
+
+    /* จัดกลุ่มเนื้อหา */
+    .flame-info {
+        width: 100%;
+        min-width: 0;
+        gap: 25px;
+    }
+
+    .meaning,
+    .motive,
+    .problem {
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .meaning legend,
+    .motive legend,
+    .problem legend {
+        max-width: calc(100% - 30px);
+        font-size: 23px;
+    }
+
+    .meaning p,
+    .motive p,
+    .problem p {
+        overflow-wrap: anywhere;
+    }
+
+    .flame-section h1 {
+        font-size: 42px;
+    }
+
+    .flame-line {
+        margin-bottom: 55px;
+    }
+
+    .closed {
+        margin-top: 100px;
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE: MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* Navigation */
+    .nav-bar {
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 12px 10px;
+    }
+
+    .coffee {
+        margin-left: 0;
+    }
+
+    .nav-container {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .nav-container > .menu:nth-child(5) {
+        margin-right: 0;
+    }
+
+    .menu:hover {
+        transform: scale(1.08);
+    }
+
+    /* พื้นที่หลัก */
+    .flame-header {
+        padding: 0 5% 55px;
+    }
+
+    .flame-section h1 {
+        font-size: clamp(26px, 7vw, 36px);
+        text-align: center;
+        margin: 25px auto 35px;
+        overflow-wrap: anywhere;
+    }
+
+    .flame-line {
+        width: min(180px, 65%);
+        margin-bottom: 35px;
+    }
+
+    /* รูปภาพ 2 คอลัมน์ */
+    .flame-image {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .flame-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 4;
+        border-radius: 10px;
+    }
+
+    /* กล่องข้อมูล */
+    .flame-info {
+        gap: 22px;
+    }
+
+    .meaning,
+    .motive,
+    .problem {
+        padding: 12px 13px 16px;
+        border-width: 1.5px;
+        border-radius: 9px;
+    }
+
+    .meaning legend,
+    .motive legend,
+    .problem legend {
+        max-width: calc(100% - 20px);
+        padding: 0 7px;
+        font-size: 18px;
+        overflow-wrap: anywhere;
+    }
+
+    .meaning i,
+    .motive i,
+    .problem i {
+        font-size: 19px;
+        padding-right: 3px;
+    }
+
+    .meaning p,
+    .motive p,
+    .problem p {
+        font-size: 15px;
+        line-height: 1.8;
+        margin: 8px 0;
+        text-indent: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    /* เส้นและไอคอนปิดท้าย */
+    .closed {
+        margin-top: 65px;
+    }
+
+    .contact-line1,
+    .contact-line2 {
+        width: 100%;
+        margin: 30px auto;
+    }
+
+    .ending-icon {
+        font-size: 24px;
+        padding: 0 12px;
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE: SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+
+    .nav-container {
+        gap: 10px 14px;
+    }
+
+    .menu {
+        font-size: 14px;
+    }
+
+    .flame-header {
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+
+    .flame-image {
+        gap: 8px;
+    }
+
+    .meaning,
+    .motive,
+    .problem {
+        padding: 10px 10px 13px;
+    }
+
+    .meaning legend,
+    .motive legend,
+    .problem legend {
+        font-size: 16px;
+    }
+
+    .meaning p,
+    .motive p,
+    .problem p {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,519 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+
+    background: linear-gradient(90deg, rgb(5, 1, 31), rgb(24, 0, 111), rgb(34, 0, 61));
+    color: white;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    font-weight: 500;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.coffee {
+    margin-left: 20px;
+
+    transform: translateY(-3px);
+}
+
+.logo-name {
+    background: linear-gradient(45deg, rgb(59, 130, 246), rgb(221, 32, 255));
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    cursor: pointer;
+}
+
+.logo a {
+    font-weight: 1000;
+    text-decoration: none;
+}
+
+.nav-container {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-container>.menu:nth-child(5) {
+    margin-right: 40px;
+}
+
+.menu {
+    text-decoration: none;
+
+    color: white;
+
+    transition: 0.3s;
+
+    position: relative;
+    width: fit-content;
+}
+
+.menu::before {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+
+    border-radius: 1px;
+
+    background: white;
+
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+.menu:hover::before {
+    width: 110%;
+}
+
+.menu:hover {
+    text-shadow: 0 0 10px white;
+
+    transform: scale(1.27);
+}
+
+/* -------------------------------------------------------------------------------------==------- content ------------------------------------------------------------------------------------------------- */
+
+.heat-header {
+    width: 100%;
+    height: auto;
+
+    position: relative;
+    width: 100%;
+    padding: 100px 3% 120px;
+    overflow: hidden;
+    color: #fff;
+    background:
+        radial-gradient(ellipse at 10% 15%,
+            rgba(78, 25, 190, 0.16),
+            transparent 45%),
+        radial-gradient(ellipse at 90% 60%,
+            rgba(0, 100, 255, 0.12),
+            transparent 45%),
+        #05010f;
+}
+
+.heat-section h1 {
+    font-size: 50px;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 20px auto 50px;
+
+    background: linear-gradient(90deg, rgb(204, 0, 255), rgb(125, 173, 249), rgb(204, 0, 255));
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.heat-line {
+    position: relative;
+    width: min(220px, 60%);
+    height: 2px;
+    margin: 0 auto 75px;
+
+    background: linear-gradient(90deg,
+            transparent,
+            #8657ff,
+            #54c8ff,
+            transparent);
+
+    box-shadow: 0 0 15px rgba(123, 74, 255, 0.65);
+}
+
+.heat-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image info";
+    align-items: center;
+}
+
+.heat-image {
+    grid-area: image;
+
+}
+
+.heat-info {
+    grid-area: info;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.heat-info span {
+    font-weight: bold;
+}
+
+.heat-image {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 20px;
+}
+
+.heat-image img:nth-of-type(1), .heat-image img:nth-of-type(2) {
+    display: block;
+    box-sizing: border-box;
+
+    width: 320px;
+    height: 270px;
+    object-fit: cover;
+
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+.heat-image img:nth-of-type(3), .heat-image img:nth-of-type(4) {
+    display: block;
+    box-sizing: border-box;
+
+    width: 320px;
+    height: 450px;
+    object-fit: cover;
+
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+.meaning,
+.motive,
+.problem {
+    min-width: 0;
+    margin: 0;
+    padding: 15px 20px 20px;
+
+    color: #f5f3ff;
+    font-size: 20px;
+
+    border: 2px solid #6D28D9;
+    border-radius: 10px;
+}
+
+.meaning legend,
+.motive legend,
+.problem legend {
+    font-family: "Kanit";
+
+    padding: 0 12px;
+    border: none;
+
+    color: #bba4ff;
+    font-size: 26px;
+    font-weight: 600;
+
+    background: transparent;
+}
+
+.meaning i,
+.motive i,
+.problem i {
+    padding-right: 5px;
+}
+
+.meaning i {
+    font-size: 35px;
+
+    transform: rotate(-5deg);
+}
+
+.motive i {
+    font-size: 45px;
+
+    transform: rotate(10deg);
+}
+
+.problem i {
+    font-size: 35px;
+
+    transform: rotate(-10deg);
+}
+
+.meaning p,
+.motive p,
+.problem p {
+    font-family: "Google Sans";
+    font-size: 19px;
+    margin: 8px 0;
+
+    text-indent: 20px;
+}
+
+.closed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    margin: 150px auto 0;
+
+    width: 100%;
+}
+
+.contact-line1 {
+    position: relative;
+    width: min(700px, 100%);
+    height: 1px;
+    margin: 55px auto;
+
+    background: linear-gradient(90deg,
+            #8657ff,
+            #54c8ff);
+
+    box-shadow: 0 0 15px rgba(123, 74, 255, 0.65);
+}
+
+.contact-line2 {
+    position: relative;
+    width: min(700px, 100%);
+    height: 1px;
+    margin: 55px auto;
+
+    background: linear-gradient(90deg,
+            #54c8ff,
+            #8657ff);
+
+    box-shadow: 0 0 15px rgb(122, 74, 255);
+}
+
+.ending-icon {
+    position: relative;
+    font-size: 30px;
+    padding: 0 20px;
+
+    color: #7c4ae0;
+    text-shadow: 0 0 45px rgb(122, 74, 255);
+}
+
+
+
+
+/* ========================================
+   RESPONSIVE: TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .heat-section {
+        padding: 80px 3% 100px;
+    }
+
+    .heat-container {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "image"
+            "info";
+        gap: 45px;
+    }
+
+    .heat-image {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .heat-image img:nth-of-type(1),
+    .heat-image img:nth-of-type(2) {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.2 / 1;
+    }
+
+    .heat-image img:nth-of-type(3),
+    .heat-image img:nth-of-type(4) {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1.1;
+    }
+
+    .heat-info {
+        width: 100%;
+        gap: 25px;
+    }
+
+    .meaning,
+    .motive,
+    .problem {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .heat-section h1 {
+        font-size: 42px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE: MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* Navigation */
+
+    .nav-bar {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 14px;
+        padding: 12px 16px;
+    }
+
+    .coffee {
+        margin-left: 0;
+    }
+
+    .nav-container {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    .nav-container > .menu:nth-child(5) {
+        margin-right: 0;
+    }
+
+    .menu:hover {
+        transform: scale(1.08);
+    }
+
+    /* Main section */
+
+    .heat-section {
+        padding: 45px 16px 70px;
+    }
+
+    .heat-section h1 {
+        font-size: clamp(28px, 7vw, 38px);
+        text-align: center;
+        margin: 10px auto 30px;
+    }
+
+    .heat-line {
+        margin-bottom: 40px;
+        width: min(180px, 60%);
+    }
+
+    /* Images */
+
+    .heat-container {
+        gap: 30px;
+    }
+
+    .heat-image {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .heat-image img:nth-of-type(1),
+    .heat-image img:nth-of-type(2) {
+        aspect-ratio: 1 / 1;
+    }
+
+    .heat-image img:nth-of-type(3),
+    .heat-image img:nth-of-type(4) {
+        aspect-ratio: 1 / 1.15;
+    }
+
+    .heat-image img {
+        max-width: 100%;
+    }
+
+    /* Information boxes */
+
+    .heat-info {
+        gap: 24px;
+    }
+
+    .meaning,
+    .motive,
+    .problem {
+        padding: 12px 14px 16px;
+        border-width: 1px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
+    .meaning legend,
+    .motive legend,
+    .problem legend {
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0 7px;
+        font-size: 19px;
+        overflow-wrap: anywhere;
+    }
+
+    .meaning i {
+        font-size: 23px;
+    }
+
+    .motive i {
+        font-size: 25px;
+    }
+
+    .problem i {
+        font-size: 23px;
+    }
+
+    .meaning p,
+    .motive p,
+    .problem p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin: 8px 0;
+        text-indent: 16px;
+        overflow-wrap: break-word;
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE: SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+
+    .nav-container {
+        gap: 10px 14px;
+    }
+
+    .heat-section {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .heat-image {
+        gap: 8px;
+    }
+
+    .meaning legend,
+    .motive legend,
+    .problem legend {
+        font-size: 17px;
+    }
+
+    .meaning p,
+    .motive p,
+    .problem p {
+        font-size: 15px;
+    }
+}
